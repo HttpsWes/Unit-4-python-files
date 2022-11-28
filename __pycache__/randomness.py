@@ -1,9 +1,9 @@
 from turtle import *
 from random import randint, choice as rand_choice
 
-colors = ['blue', 'red', 'green', 'gery', 'purple','brown', 'orange']
+colors = ['blue', 'red', 'green', 'grey', 'purple','brown', 'orange']
 
-speed(3)
+speed(0)
 
 for i in range (75):
     penup()
@@ -11,9 +11,12 @@ for i in range (75):
     pendown()
 
     begin_fill()
-    color(rand_choice(colors))
+     # color(rand_choice(colors))
+    pencolor(rand_choice(colors))
+    fillcolor(rand_choice(colors))
+    pensize(3)
     circle(randint(10,50), steps=randint(4,10))
-    left,right(0,90)
+    right(randint(0,180))
     end_fill()
 
     
