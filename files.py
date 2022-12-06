@@ -1,4 +1,4 @@
-my_file = open("Wesley.txt", "r+")
+my_file = open("Wesley.txt", "a")
 
 # print(my_file.readlines())
 
@@ -6,6 +6,12 @@ my_file = open("Wesley.txt", "r+")
 
 # print("world")
 
+my_file.write('Im writing from python Boo \n')
+
+my_file.close()
+
+my_file = open("Wesley.txt")
+
 for line in my_file.readlines():
     print(line, end="")
-my_file.writelines(['Im writing from python Boo'])
+
